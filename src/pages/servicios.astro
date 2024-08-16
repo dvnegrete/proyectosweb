@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/Cta.astro";
+---
+
+<BaseLayout title="Servicios">
+  <h3 class="text-4xl p-3">Servicios de Desarrollo Web y Cloud Computing</h3>
+
+  <p>
+    Ofrecemos una gama completa de servicios de desarrollo web y soluciones en
+    la nube, diseñados para adaptarse a las necesidades únicas de cada cliente.
+    Ya sea que estés buscando optimizar un sitio web existente, desarrollar una
+    nueva aplicación, o migrar tus operaciones a la nube, te encuentras en el
+    lugar correcto.
+  </p>
+
+  <CTA
+    title="Desarrollo Web Personalizado"
+    description="Creamos sitios web a medida que reflejan la identidad de tu negocio, con un enfoque en la experiencia del usuario y el diseño responsivo."
+    imgRight={false}
+    imgURL="https://github-personal-dvn.s3.us-east-2.amazonaws.com/img/cecati196-web-dark.png"
+    linkTitle="CECATI 196"
+    linkURL="https://cecati196.edu.mx"
+  />
+  <CTA
+    title="Aplicaciones Full Stack"
+    description="Desarrollamos aplicaciones web completas utilizando tecnologías modernas como Node.js, garantizando un rendimiento robusto y eficiente."
+    imgRight={true}
+    imgURL="https://github-personal-dvn.s3.us-east-2.amazonaws.com/img/proyectos/cecati13-desktop.jpg"
+    linkTitle="CECATI 13"
+    linkURL="https://cecati13.edu.mx"
+  />
+  <CTA
+    title="Soluciones en Cloud Computing"
+    description="Implementamos y gestionamos servicios en la nube, permitiéndote escalar tu negocio con seguridad, flexibilidad y accesibilidad global."
+    imgRight={false}
+    imgURL=""
+    linkTitle=""
+    linkURL=""
+  />
+  <CTA
+    title="Integración de Sistemas y APIs."
+    description="Conectamos diferentes sistemas y servicios a través de APIs para crear flujos de trabajo automatizados que ahorran tiempo y reducen errores."
+    imgRight={true}
+    imgURL=""
+    linkTitle=""
+    linkURL=""
+  />
+  <CTA
+    title="Optimización y Mantenimiento Web"
+    description="Mantenemos y optimizamos tu sitio web o aplicación para asegurar su rendimiento, seguridad y relevancia a largo plazo."
+    imgRight={false}
+    imgURL=""
+    linkTitle=""
+    linkURL=""
+  />
+</BaseLayout>

@@ -1,0 +1,102 @@
+---
+//import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Card from "../components/Card.astro";
+import SectionIntro from "../components/SectionIntro.astro";
+---
+
+<BaseLayout title="ProyectosWEB">
+  <div class="stack gap-20 lg:gap-48">
+    <main class="wrapper about">
+      <h1>Proyectos <span class="text-gradient">WEB</span></h1>
+      <img
+        class="rounded-lg"
+        src="https://github-personal-dvn.s3.us-east-2.amazonaws.com/proyectosweb/img990w.jpg"
+        alt=""
+      />
+      <a href="/servicios/">Descubre como podemos ayudarte...</a>
+      <SectionIntro />
+      <figure class="flex justify-center">
+        <img
+          class="w-3/4 p-6 rounded-xl"
+          src="https://github-personal-dvn.s3.us-east-2.amazonaws.com/proyectosweb/cloud-computing.jpg"
+          alt=""
+        />
+      </figure>
+
+      <ul role="list" class="link-card-grid">
+        <Card
+          href="https://cecati13.edu.mx"
+          title="Cecati 13"
+          body="Gracias a la solución de inscripciones en línea implementando, nuestro proceso de inscripción mucho más rapido y agil, tanto para nuestros usuarios como para el personal del plantel."
+        />
+        <Card
+          href="https://cecati196.edu.mx"
+          title="Cecati 196"
+          body='"Ahora tenemos un sitio web moderno y podemos mostrar nuestra oferta educativa que se modifica constantemente en un solo sitio."'
+        />
+      </ul>
+      <figure class="flex justify-center">
+        <img
+          class="w-10/12 h-fit p-10 rounded-full"
+          src="https://github-personal-dvn.s3.us-east-2.amazonaws.com/proyectosweb/diseno-websites.jpg"
+          alt=""
+        />
+      </figure>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    background-image: var(--gradient-accent-orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+</style>

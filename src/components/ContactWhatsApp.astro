@@ -1,0 +1,17 @@
+---
+import { iconPaths } from "../components/IconPaths";
+import Icon from "../components/Icon.astro";
+
+const stringWA: { icon: keyof typeof iconPaths } = {
+  icon: "whatsapp-logo",
+};
+---
+
+<section class="w-screen py-10">
+  <div class="flex items-center justify-end pl-4 pr-20">
+    <p class="mr-4">O también puedes contactarme por WhatsApp</p>
+    <a href="https://wa.me/5620240995">
+      <Icon icon={stringWA.icon} size="500" color="green" />
+    </a>
+  </div>
+</section>

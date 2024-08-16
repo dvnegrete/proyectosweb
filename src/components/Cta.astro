@@ -1,0 +1,57 @@
+---
+import ImageService from "../components/ImageService.astro";
+
+interface Props {
+    title: string | undefined;
+	description?: string | undefined;
+	imgRight?: boolean | undefined;
+    imgURL: string | undefined;
+    linkTitle:  string | undefined;
+    linkURL:  string | undefined;
+}
+
+const {
+    title,
+	description,
+    imgRight,
+    imgURL,
+    linkTitle,
+    linkURL,
+} = Astro.props;
+---
+
+<!--
+  Heads up! 👋
+
+  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
+-->
+
+<section class="overflow-hidden  sm:grid sm:grid-cols-2 sm:items-center p-2">
+    {
+        imgRight ? <></> : <ImageService imgURL={imgURL}></ImageService>
+    }
+    <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+      <div class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+        <h2 class="text-2xl font-bold md:text-3xl">
+          {title}
+        </h2>
+  
+        <p class="hidden md:mt-4 md:block">
+          {description}
+        </p>
+  
+        <div class="mt-4 md:mt-8">
+          <a
+            href={linkURL}
+            class="inline-block rounded px-12 py-3 text-sm font-medium transition focus:outline-none focus:ring"
+          >
+            {linkTitle}
+          </a>
+        </div>
+      </div>
+    </div>  
+    {
+        !imgRight ? <></> : <ImageService imgURL={imgURL}></ImageService>
+    }
+</section>
+  

@@ -1,0 +1,97 @@
+---
+import "../styles/global.css";
+import { iconPaths } from "../components/IconPaths";
+import Icon from "../components/Icon.astro";
+
+interface Props {
+  title?: string | undefined;
+  subtitle?: string | undefined;
+}
+
+const {
+  title = "Impulsa tu negocio con soluciones web y en la nube",
+  subtitle = "Desarrollo Full Stack e implementación de servicios de cloud computing. Obten una solución digital personalizada para llevar a tu institución o negocio al siguiente nivel de la era digital.",
+} = Astro.props;
+
+const textFront:{ title: string; description: string; icon: keyof typeof iconPaths }[] = [
+  {
+    icon: "trophy",
+    title: "Soluciones",
+    description:
+      "Obten una solución digital personalizada para llevar a tu institución o negocio al siguiente nivel de la era digital.",
+  },
+  {
+    icon:"trophy",
+    title: "Presencia Online",
+    description:
+      "Transforma tu presencia en línea con sitios web diseñados a medida que se adaptan a las necesidades de tu negocio.",
+  },
+  {
+    icon: "cloud",
+    title: "Cloud Computing",
+    description:
+      "Escalabilidad, seguridad y accesibilidad global con alguna solución en la nube.",
+  },
+  {
+    icon: "code",
+    title: "Aplicaciones Web / Single Page Application (SPA)",
+    description:
+      "Obten una aplicación web completa que integre las funcionalidades necesarias a la medida de tus necesidades para un rendimiento óptimo.",
+  },
+  {
+    icon: "rocket-launch",
+    title: "Mantenimiento",
+    description:
+      "Mantén tu sitio web y aplicaciones en su mejor forma con nuestro servicio de optimización.",
+  },
+];
+---
+
+<section>
+  <div class="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+    <div class="max-w-xl">
+      <h2 class="text-3xl font-bold sm:text-4xl section-title">{title}</h2>
+
+      <p class="mt-4">
+        {subtitle}
+      </p>
+    </div>
+    <div
+      class="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
+    >
+      {
+        textFront.map((item) => (
+          <div class="flex items-start gap-4">
+            <span class="shrink-0 rounded-lg icons">
+              <Icon icon={item.icon}/>
+            </span>
+
+            <div>
+              <h2 class="text-lg font-bold">{item.title}</h2>
+
+              <p class="mt-1 text-sm">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    color: var(--gray-200);
+  }
+  .section-title {
+    color: var(--gray-0);
+  }
+  .icons {
+    color: var(--accent-dark);
+    transition: color var(--theme-transition);
+    padding: var(--icon-padding);
+  }
+  .icons:hover,
+  .icons:focus {
+    color: var(--accent-text-over);
+  }
+</style>
