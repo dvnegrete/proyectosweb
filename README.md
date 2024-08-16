@@ -1,54 +1,61 @@
-# Astro Starter Kit: Basics
+# ProyectosWeb - Desarrollo Web y Soluciones en la Nube
 
-```sh
-npm create astro@latest -- --template basics
+![just-the-basics](https://github-personal-dvn.s3.us-east-2.amazonaws.com/proyectosweb/landing-page.png)
+
+## 🚀 Descripción
+
+ProyectosWeb es un proyecto que desarrollo de manera independiente, dedicado a ofrecer servicios profesionales de desarrollo web y cloud computing. Con un enfoque personalizado, ayudo a empresas, incluyendo instituciones educativas, a mejorar su presencia digital, optimizar procesos y escalar sus operaciones a través de soluciones tecnológicas hechas a medida.
+
+Mi especialidad incluye:
+
+- **Desarrollo Full Stack:** Creación de aplicaciones completas y optimización de sitios web existentes.
+- **Cloud Computing:** Implementación y gestión de infraestructuras en la nube, garantizando seguridad, escalabilidad y rendimiento.
+- **Soluciones a Medida:** Diseño y desarrollo de soluciones específicas que se adaptan a las necesidades únicas de cada cliente.
+
+## Estructura del proyecto
+
+El sitio web está organizado en las siguientes secciones principales:
+
+1. **Página de Inicio:** Presenta mis servicios y destaca los beneficios clave para los clientes.
+
+2. **Página de Servicios:** Detalla las soluciones generales que ofrezco, desde desarrollo web hasta servicios en la nube.
+
+3. **Página de Soluciones para Escuelas:** Orientada a instituciones educativas, resalta mi experiencia en el desarrollo de sistemas de inscripción y gestión académica.
+4. **Página de Contacto:** Facilita la conexión con clientes potenciales mediante un formulario de contacto y otros medios de comunicación.
+
+## Características
+
+- **Diseño Responsivo:** El sitio está diseñado para ser accesible y funcional en dispositivos de cualquier tamaño.
+
+- **Integración en la Nube:** Todas mis soluciones están optimizadas para funcionar en la nube, proporcionando acceso global y escalabilidad.
+- **Fácil Navegación:** Estructura clara y lógica que permite a los usuarios encontrar rápidamente la información que necesitan.
+
+## Tecnologías Utilizadas
+- **Frontend:** Astro, React
+- **Control de versiones:** Git, Github
+
+## Instalación y Configuración
+1. Clonar el Repositorio:
+```
+git clone https://github.com/dvnegrete/proyectosweb.git
+cd proyectosweb
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+2. Instalar Dependencias:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+npm install
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+3. Iniciar el Servidor:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-Any static assets, like images, can be placed in the `public/` directory.
+```
+npm run start
+```
+El servidor estaá corriendo en  `http://localhost:4321/`
 
-## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+## Licencia
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Este proyecto está licenciado bajo la Licencia MIT. Para más detalles, consulta el archivo [LICENSE](./LICENSE).
