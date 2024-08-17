@@ -3,12 +3,20 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Card from "../components/Card.astro";
 import SectionIntro from "../components/SectionIntro.astro";
+
+const arrayKeywords = [
+  "Desarrollo web", "proyectos web", "proyecto web", "Damián Valenzuela Negrete", "Damián Valenzuela", "dvnegrete", "sitios web", "websites", "website", "Desarrollo Full Stack", "API", "mantenimiento web", "cloud computing"
+];
 ---
 
-<BaseLayout title="ProyectosWEB">
+<BaseLayout 
+  title="ProyectoSweb" 
+  description="Desarrollo de proyectos web, y Cloud Computing"
+  keywords={arrayKeywords.join(",")}
+  >
   <div class="stack gap-20 lg:gap-48">
     <main class="wrapper about">
-      <h1><span class="personal-brand">P</span>royecto<span class="personal-brand">S</span> <span class="text-gradient">WEB</span></h1>
+      <h1><span class="personal-brand">P</span>royecto<span class="personal-brand">S</span> web</h1>
       <img
         class="rounded-lg"
         src="https://github-personal-dvn.s3.us-east-2.amazonaws.com/proyectosweb/img990w.jpg"

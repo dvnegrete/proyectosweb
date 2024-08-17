@@ -1,9 +1,37 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/Cta.astro";
+const arrayKeywords = [
+  "Desarrollo web",
+  "proyectos web",
+  "proyecto web",  
+  "Desarrollo personalizado",
+  "Desarrollo web personalizado",
+  "página web",
+  "páginas web",
+  "pagina web",
+  "diseño",
+  "creación",
+  "creacion",
+  "paginas web",
+  "websites",
+  "website",
+  "mantenimiento web",
+  "cloud computing",
+  "nube",
+  "integración sistemas web",
+  "optimización web",
+  "matenimiento web",
+  "aplicaciones web",
+  "aplicacion web",
+  "aplicación web",
+];
 ---
 
-<BaseLayout title="Servicios">
+<BaseLayout
+  title="Servicios - Proyectos web"
+  keywords={arrayKeywords.join(",")}
+>
   <h3 class="text-4xl p-3">Servicios de Desarrollo Web y Cloud Computing</h3>
 
   <p>
