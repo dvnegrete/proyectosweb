@@ -21,8 +21,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
-<meta name="keywords" content={keywords}>
-<meta name="robots" content="index,follow">
+<meta name="keywords" content={keywords} />
+<meta name="robots" content="index,follow" />
 <link rel="canonical" href={canonicalURL} />
 
 <link rel="apple-touch-icon" href="/images/icon/192x192.png" />
@@ -64,7 +64,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <meta name="twitter:site" content="@dvnegrete" />
 <meta name="twitter:creator" content="@dvnegrete" />
 
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+<link rel="icon" type="image/png" href="/favicon.png" />
+<!-- Icono generado en: https://icons8.com -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
