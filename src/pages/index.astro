@@ -16,7 +16,9 @@ const arrayKeywords = [
   >
   <div class="stack gap-20 lg:gap-48">
     <main class="wrapper about">
-      <h1><span class="personal-brand">P</span>royecto<span class="personal-brand">S</span> web</h1>
+      <h1 class="title-h1">
+        <span class="personal-brand">P</span>royecto<span class="personal-brand">S</span><span>web</span>
+      </h1>
       <img
         class="rounded-lg"
         src="https://github-personal-dvn.s3.us-east-2.amazonaws.com/proyectosweb/img990w.jpg"
@@ -86,5 +88,10 @@ const arrayKeywords = [
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 2rem;
     padding: 0;
+  }
+  .title-h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 </style>
