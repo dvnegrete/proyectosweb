@@ -3,58 +3,78 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Escuelas - ProyectoSweb">
-  <h2>Soluciones Digitales para Instituciones Educativas</h2>
-  <h4>
-    Desarrollo web y sistemas de inscripción creados con la experiencia de la
-    transformación digital de escuelas.
-  </h4>
+  <section class="p-5 w-9/12 self-center">
+    <h2 class="text-4xl font-bold my-5">
+      Soluciones Digitales para Instituciones Educativas
+    </h2>
+    <h4 class="text-2xl font-bold my-6">
+      Desarrollo web y sistemas de inscripción creados con la experiencia de la
+      transformación digital de escuelas.
+    </h4>
 
-  <p>
-    Como desarrollador independiente, ofrezco soluciones digitales
-    personalizadas para instituciones educativas que desean modernizar sus
-    procesos y mejorar su presencia en línea. Mi experiencia en el sector me
-    permite entender las necesidades específicas de las escuelas y crear
-    sistemas que faciliten y aceleren sus operaciones diarias.
-  </p>
-
-  <ul>
-    <li>Sistemas de Inscripción Eficientes:</li>
-    <p>
-      Transforma el proceso de inscripción en tu institución con un sistema en
-      línea que simplifica la gestión de estudiantes, reduce la carga
-      administrativa y mejora la experiencia de los padres y alumnos.
+    <p class="mb-6 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 p-5">
+      Como desarrollador independiente, ofrezco soluciones digitales
+      personalizadas para instituciones educativas que desean modernizar sus
+      procesos y mejorar su presencia en línea. Mi experiencia en el sector me
+      permite entender las necesidades específicas de las escuelas y crear
+      sistemas que faciliten y aceleren sus operaciones diarias.
     </p>
 
-    <li>Portal Educativo Personalizado:</li>
-    <p>
-      Desarrollo portales educativos que permiten a los estudiantes y profesores
-      acceder a recursos, gestionar tareas, y comunicarse de manera efectiva,
-      todo desde una plataforma segura y fácil de usar.
-    </p>
-    <li>Autenticación Segura con OAuth:</li>
-    <p>
-      Facilita el acceso de estudiantes, padres y personal educativo mediante la
-      implementación de autenticación segura a través de OAuth. Conecta tu
-      sistema con servicios populares como Gmail, Facebook, y cuentas
-      educativas, permitiendo a los usuarios autenticarse con credenciales que
-      ya utilizan en su día a día. Esto no solo mejora la seguridad, sino que
-      también simplifica el proceso de inscripción y acceso a plataformas
-      educativas
-    </p>
+    <ul class="space-y-4">
+      <li class="pb-3 sm:pb-4">Sistemas de Inscripción Eficientes:</li>
+      <p class="mx-7">
+        Transforma el proceso de inscripción en tu institución con un sistema en
+        línea que simplifica la gestión de estudiantes, reduce la carga
+        administrativa y mejora la experiencia de los padres y alumnos.
+      </p>
 
-    <li>Reducción de Costos Operativos con Soluciones en la Nube:</li>
-    <p>
-      Implementando soluciones en la nube, ayudo a las instituciones a disminuir
-      sus costos operativos con el tiempo. La migración a la nube no solo ofrece
-      escalabilidad y accesibilidad, sino que también reduce la necesidad de
-      infraestructura física y mantenimiento continuo, lo que se traduce en
-      ahorros significativos a largo plazo
-    </p>
-  </ul>
+      <li class="pb-3 sm:pb-4">Portal Educativo Personalizado:</li>
+      <p class="mx-7">
+        Desarrollo portales educativos que permiten a los estudiantes y
+        profesores acceder a recursos, gestionar tareas, y comunicarse de manera
+        efectiva, todo desde una plataforma segura y fácil de usar.
+      </p>
+      <li class="pb-3 sm:pb-4">Autenticación Segura con OAuth:</li>
+      <p class="mx-7">
+        Facilita el acceso de estudiantes, padres y personal educativo mediante
+        la implementación de autenticación segura a través de OAuth. Conecta tu
+        sistema con servicios populares como Gmail, Facebook, y cuentas
+        educativas, permitiendo a los usuarios autenticarse con credenciales que
+        ya utilizan en su día a día. Esto no solo mejora la seguridad, sino que
+        también simplifica el proceso de inscripción y acceso a plataformas
+        educativas
+      </p>
 
-  <h5>
-    ¿Listo para llevar tu escuela al siguiente nivel? Contacta directamente
-    conmigo para comenzar a diseñar una solución a la medida de tus necesidades.
-  </h5>
-  <button>Contacto</button>
+      <li class="pb-3 sm:pb-4">
+        Reducción de Costos Operativos con Soluciones en la Nube:
+      </li>
+      <p class="mx-7">
+        Implementando soluciones en la nube, ayudo a las instituciones a
+        disminuir sus costos operativos con el tiempo. La migración a la nube no
+        solo ofrece escalabilidad y accesibilidad, sino que también reduce la
+        necesidad de infraestructura física y mantenimiento continuo, lo que se
+        traduce en ahorros significativos a largo plazo
+      </p>
+    </ul>
+
+    <div class="flex flex-col items-center">
+      <h5 class="text-xl font-bold pt-9 pb-4">
+        ¿Listo para llevar tu escuela al siguiente nivel? Contacta directamente
+        conmigo para comenzar a diseñar una solución a la medida de tus
+        necesidades.
+      </h5>
+      <button
+        class="font-medium rounded-lg text-sm px-5 w-28 py-2.5 focus:outline-none button-color"
+      >
+        Contacto
+      </button>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .button-color {
+    background-color: var(--accent-regular);
+    color: var(--accent-text-over);
+  }
+</style>
