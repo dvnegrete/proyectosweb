@@ -128,7 +128,7 @@ export const FormContact = () => {
     return (
         <section className="contact_form">
             <div className="form animate__animated animate__bounceInUp">
-                <h4>Deja un mensaje para contactarte</h4>
+                <h4>También puedes dejar un mensaje</h4>
                 {skeleton && <LoaderSkeleton />}
                 {showForm && form()}
                 {showMsgSave && <AlertSave />}
