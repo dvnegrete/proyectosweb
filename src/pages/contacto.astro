@@ -5,6 +5,22 @@ import ContactWA from "../components/ContactWhatsApp.astro";
 ---
 
 <BaseLayout title="Contacto - ProyectoSweb Damián V.N.">
-  <FormContact  client:visible />
-  <ContactWA/>
+  
+  <!-- Principio del widget integrado de Calendly -->
+  <script
+    type="text/javascript"
+    src="https://assets.calendly.com/assets/external/widget.js"
+    async></script>
+  <div
+    class="calendly-inline-widget px-2 rounded"
+    data-url="https://calendly.com/dvnegrete?hide_gdpr_banner=1"
+    style="min-width:320px;height:700px;"
+  >
+  </div>
+  <!-- Final del widget integrado de Calendly -->
+
+  <FormContact client:visible />
+
+  <ContactWA />
+  
 </BaseLayout>
