@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import CTA from "../components/Cta.astro";
 const arrayKeywords = [
   "Desarrollo web",
   "proyectos web",
@@ -29,54 +28,122 @@ const arrayKeywords = [
 ---
 
 <BaseLayout title="Servicios - ProyectoSweb" keywords={arrayKeywords.join(",")}>
-  <h3 class="text-4xl p-3">Servicios de Desarrollo Web y Cloud Computing</h3>
+  <div class="max-w-screen-lg text-center mx-auto mb-7">
+    <h3 class="text-4xl p-3">Servicios de Desarrollo Web y Cloud Computing</h3>
+    <p>
+      Obten una gama completa de servicios de desarrollo web y soluciones en la
+      nube para tu aplicación web, diseñados para adaptarse a las necesidades
+      únicas de cada cliente. Ya sea que estés buscando optimizar un sitio web
+      existente, desarrollar una nueva aplicación, añadir una funcionalidad o
+      migrar tus operaciones a la nube, te encuentras en el lugar correcto.
+    </p>
 
-  <p>
-    Ofrecemos una gama completa de servicios de desarrollo web y soluciones en
-    la nube, diseñados para adaptarse a las necesidades únicas de cada cliente.
-    Ya sea que estés buscando optimizar un sitio web existente, desarrollar una
-    nueva aplicación, o migrar tus operaciones a la nube, te encuentras en el
-    lugar correcto.
-  </p>
+    <ul class="flex flex-wrap justify-center px-12 mt-6">
+      <li class="mt-2 pb-3 sm:pb-4 w-full md:w-3/6">
+        <h5>Desarrollo Web Personalizado</h5>
+        <p class="mb-6 text-lg font-normal p-5">
+          Obten un sitio web a medida que refleje la identidad de tu negocio,
+          con un enfoque en la experiencia del usuario y el diseño responsivo.
+        </p>
+      </li>
 
-  <CTA
-    title="Desarrollo Web Personalizado"
-    description="Creamos sitios web a medida que reflejan la identidad de tu negocio, con un enfoque en la experiencia del usuario y el diseño responsivo."
-    imgRight={false}
-    imgURL="https://github-personal-dvn.s3.us-east-2.amazonaws.com/img/cecati196-web-dark.png"
-    linkTitle="CECATI 196"
-    linkURL="https://cecati196.edu.mx"
-  />
-  <CTA
-    title="Aplicaciones Full Stack"
-    description="Desarrollamos aplicaciones web completas utilizando tecnologías modernas como Node.js, garantizando un rendimiento robusto y eficiente."
-    imgRight={true}
-    imgURL="https://github-personal-dvn.s3.us-east-2.amazonaws.com/img/proyectos/cecati13-desktop.jpg"
-    linkTitle="CECATI 13"
-    linkURL="https://cecati13.edu.mx"
-  />
-  <CTA
-    title="Soluciones en Cloud Computing"
-    description="Implementamos y gestionamos servicios en la nube, permitiéndote escalar tu negocio con seguridad, flexibilidad y accesibilidad global."
-    imgRight={false}
-    imgURL=""
-    linkTitle=""
-    linkURL=""
-  />
-  <CTA
-    title="Integración de Sistemas y APIs."
-    description="Conectamos diferentes sistemas y servicios a través de APIs para crear flujos de trabajo automatizados que ahorran tiempo y reducen errores."
-    imgRight={true}
-    imgURL=""
-    linkTitle=""
-    linkURL=""
-  />
-  <CTA
-    title="Optimización y Mantenimiento Web"
-    description="Mantenemos y optimizamos tu sitio web o aplicación para asegurar su rendimiento, seguridad y relevancia a largo plazo."
-    imgRight={false}
-    imgURL=""
-    linkTitle=""
-    linkURL=""
-  />
+      <li class="my-8 pb-3 sm:pb-4 w-full md:w-3/6">
+        <figure class="flex justify-evenly">
+          <img
+            class="max-h-44 rounded-lg"
+            src="https://github-personal-dvn.s3.us-east-2.amazonaws.com/img/proyectos/angular-adminPro.png"
+            alt="Desarrolo Personalizado"
+          />
+          <img
+            class="max-h-44 rounded-lg"
+            src="https://github-personal-dvn.s3.us-east-2.amazonaws.com/img/media-dvn1.png"
+            alt="Desarrolo Personalizado"
+          />
+          <img
+            class="max-h-44 rounded-lg"
+            src="https://github-personal-dvn.s3.us-east-2.amazonaws.com/img/proyectos/wikiclon-mobile.jpg"
+            alt="Desarrolo Personalizado"
+          />
+        </figure>
+      </li>
+
+      <li class="my-8 pb-3 sm:pb-4 w-full md:w-3/6">
+        <h5>Aplicaciones Full Stack</h5>
+        <p class="mb-6 text-lg font-normal p-5">
+          Desarrollo de aplicaciones web completas utilizando tecnologías
+          modernas como Node.js, garantizando un rendimiento robusto y
+          eficiente.
+        </p>
+      </li>
+
+      <li class="my-8 pb-3 sm:pb-4 w-full md:w-3/6">
+        <h5>Optimización y Mantenimiento Web</h5>
+        <p class="mb-6 text-lg font-normal p-5">
+          Optimiza tu sitio web o aplicación para asegurar su rendimiento,
+          seguridad y relevancia a largo plazo.
+        </p>
+      </li>
+
+      <li class="my-8 pb-3 sm:pb-4 w-full md:w-3/6">
+        <figure class="flex justify-evenly">
+          <img
+            class="max-h-28 rounded"
+            src="https://github-personal-dvn.s3.us-east-2.amazonaws.com/img/calendar-double-02.png"
+            alt="Desarrollo de Aplicaciones web completas"
+          />
+          <img
+            class="max-h-28 rounded"
+            src="https://github-personal-dvn.s3.us-east-2.amazonaws.com/img/proyectos/comparadorStreaming2.jpg"
+            alt="Desarrollo de Aplicaciones web completas"
+          />
+        </figure>
+      </li>
+
+      <li class="my-8 pb-3 sm:pb-4 w-full md:w-3/6">
+        <h5>Soluciones en Cloud Computing</h5>
+        <p class="mb-6 text-lg font-normal p-5">
+          Implementa y gestiona servicios en la nube, permitiéndote escalar tu
+          negocio con seguridad, flexibilidad y accesibilidad global.
+        </p>
+      </li>
+
+      <li class="my-8 pb-3 sm:pb-4 w-full md:w-3/6">
+        <h5>Integración de Sistemas y APIs.</h5>
+        <p class="mb-6 text-lg font-normal p-5">
+          Conecta diferentes sistemas y servicios a través de APIs para crear
+          flujos de trabajo automatizados que ahorran tiempo y reducen errores.
+        </p>
+      </li>
+
+      <li class="my-8 pb-3 sm:pb-4 w-full md:w-3/6">
+        <figure class="flex justify-evenly flex-wrap">
+          <img
+            class="h-16 rounded px-6 my-3"
+            src="https://github-personal-dvn.s3.us-east-2.amazonaws.com/img/gcp-color.svg"
+            alt="GCP"
+          />
+          <img
+            class="h-16 rounded-full px-6 my-3"
+            src="https://github-personal-dvn.s3.us-east-2.amazonaws.com/img/render.svg"
+            alt="Render"
+          />
+          <img
+            class="h-16 rounded px-6 my-3"
+            src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg"
+            alt="Render"
+          />
+          <img
+            class="h-16 rounded px-6 my-3"
+            src="https://github-personal-dvn.s3.us-east-2.amazonaws.com/img/aws.svg"
+            alt="Render"
+          />
+          <img
+            class="max-w-32 rounded-lg bg-black p-2 my-3"
+            src="https://railway.app/brand/logotype-light.svg"
+            alt="Render"
+          />
+        </figure>
+      </li>
+    </ul>
+  </div>
 </BaseLayout>

@@ -3,22 +3,44 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Card from "../components/Card.astro";
 import SectionIntro from "../components/SectionIntro.astro";
+import Icon from "../components/Icon.astro";
 
 const arrayKeywords = [
-  "Desarrollo web", "proyectos web", "proyecto web", "Damián Valenzuela Negrete", "Damián Valenzuela", "dvnegrete", "sitios web", "websites", "website", "Desarrollo Full Stack", "API", "mantenimiento web", "cloud computing"
+  "Desarrollo web",
+  "proyectos web",
+  "proyecto web",
+  "Damián Valenzuela Negrete",
+  "Damián Valenzuela",
+  "dvnegrete",
+  "sitios web",
+  "websites",
+  "website",
+  "Desarrollo Full Stack",
+  "API",
+  "mantenimiento web",
+  "cloud computing",
 ];
 ---
 
-<BaseLayout 
-  title="ProyectoSweb" 
+<BaseLayout
+  title="ProyectoSweb"
   description="Desarrollo de proyectos web, y Cloud Computing"
   keywords={arrayKeywords.join(",")}
-  >
+>
   <div class="stack gap-20 lg:gap-48">
     <main class="wrapper about">
-      <h1 class="title-h1">
-        <span class="personal-brand">P</span>royecto<span class="personal-brand">S</span><span>web</span>
-      </h1>
+      <div class="title-container mb-10">
+        <Icon
+          icon="terminal-window"
+          color="var(--accent-regular)"
+          size="5.3em"
+        />
+        <h1 class="title-h1">
+          <span class="personal-brand ml-3">P</span>royecto<span
+            class="personal-brand">S</span
+          ><span>web</span>
+        </h1>
+      </div>
       <img
         class="rounded-lg"
         src="https://github-personal-dvn.s3.us-east-2.amazonaws.com/proyectosweb/img990w.jpg"
@@ -38,7 +60,7 @@ const arrayKeywords = [
         <Card
           href="https://cecati13.edu.mx"
           title="Cecati 13"
-          body="Gracias a la solución de inscripciones en línea implementando, nuestro proceso de inscripción mucho más rapido y agil, tanto para nuestros usuarios como para el personal del plantel."
+          body="La automatizacíon de algunos procesos en línea desde el sitio web, hacen más rápido y ágil procesos como el de inscripción. Se benefician los estudiantes y el personal del plantel."
         />
         <Card
           href="https://cecati196.edu.mx"
@@ -81,17 +103,23 @@ const arrayKeywords = [
     font-weight: 700;
     line-height: 1;
     text-align: center;
-    margin-bottom: 1em;
-  }  
+  }
   .link-card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 2rem;
     padding: 0;
   }
+  .title-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
   .title-h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
   }
 </style>
