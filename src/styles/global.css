@@ -181,9 +181,8 @@ h5 {
 /* Style Personal Brand*/
 .personal-brand {
 	font-family: var(--font-contrast);
-	/* color: #9932cc; */
-	color: #8c32cc;
-	font-size: 1.1em;
+	color: var(--accent-regular);
+	font-size: 1.2em;
 	font-weight: 700;
 }
 
