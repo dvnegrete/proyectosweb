@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Escuelas - ProyectoSweb">
-  <section class="p-5 w-9/12 self-center">
+  <section class="max-w-screen-lg text-center mx-auto mb-7">
     <h2 class="text-4xl font-bold my-5">
       Soluciones Digitales para Instituciones Educativas
     </h2>
@@ -12,62 +12,97 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       transformación digital de escuelas.
     </h4>
 
-    <p class="mb-6 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 p-5">
-      Como desarrollador independiente, ofrezco soluciones digitales
-      personalizadas para instituciones educativas que desean modernizar sus
-      procesos y mejorar su presencia en línea. Mi experiencia en el sector me
-      permite entender las necesidades específicas de las escuelas y crear
-      sistemas que faciliten y aceleren sus operaciones diarias.
+    <p class="mb-6 text-sm font-normal lg:text-lg sm:px-16 xl:px-48 p-5">
+      Como desarrollador freelance, ofrezco soluciones digitales personalizadas
+      para instituciones educativas que desean modernizar sus procesos y mejorar
+      su presencia en línea. Mi experiencia en el sector me permite entender las
+      necesidades específicas de las escuelas y crear sistemas que faciliten y
+      aceleren sus operaciones diarias.
     </p>
 
-    <ul class="space-y-4">
-      <li class="pb-3 sm:pb-4">Sistemas de Inscripción Eficientes:</li>
-      <p class="mx-7">
-        Transforma el proceso de inscripción en tu institución con un sistema en
-        línea que simplifica la gestión de estudiantes, reduce la carga
-        administrativa y mejora la experiencia de los padres y alumnos.
-      </p>
-
-      <li class="pb-3 sm:pb-4">Portal Educativo Personalizado:</li>
-      <p class="mx-7">
-        Desarrollo portales educativos que permiten a los estudiantes y
-        profesores acceder a recursos, gestionar tareas, y comunicarse de manera
-        efectiva, todo desde una plataforma segura y fácil de usar.
-      </p>
-      <li class="pb-3 sm:pb-4">Autenticación Segura con OAuth:</li>
-      <p class="mx-7">
-        Facilita el acceso de estudiantes, padres y personal educativo mediante
-        la implementación de autenticación segura a través de OAuth. Conecta tu
-        sistema con servicios populares como Gmail, Facebook, y cuentas
-        educativas, permitiendo a los usuarios autenticarse con credenciales que
-        ya utilizan en su día a día. Esto no solo mejora la seguridad, sino que
-        también simplifica el proceso de inscripción y acceso a plataformas
-        educativas
-      </p>
-
-      <li class="pb-3 sm:pb-4">
-        Reducción de Costos Operativos con Soluciones en la Nube:
+    <ul class="flex flex-wrap justify-center px-12 m-6">
+      <li class="mt-2 pb-3 sm:pb-4 w-full md:w-3/6">
+        <h5 class="p-important px-6">Sistemas de Inscripción Eficientes</h5>
+        <p class="mb-6 text-lg font-normal p-5 m-4 border rounded-lg">
+          Transforma el proceso de inscripción en tu institución con un sistema
+          en línea que simplifica la gestión de estudiantes, reduce la carga
+          administrativa y mejora la experiencia de los padres y alumnos.
+        </p>
       </li>
-      <p class="mx-7">
-        Implementando soluciones en la nube, ayudo a las instituciones a
-        disminuir sus costos operativos con el tiempo. La migración a la nube no
-        solo ofrece escalabilidad y accesibilidad, sino que también reduce la
-        necesidad de infraestructura física y mantenimiento continuo, lo que se
-        traduce en ahorros significativos a largo plazo
-      </p>
+
+      <li class="mt-2 pb-3 sm:pb-4 w-full md:w-3/6">
+        <h5 class="p-important px-6">Portal Educativo Personalizado</h5>
+        <p class="mb-6 text-lg font-normal p-5 m-4 border rounded-lg">
+          Desarrollo portales educativos que permiten a los estudiantes y
+          profesores acceder a recursos, gestionar tareas, y comunicarse de
+          manera efectiva, todo desde una plataforma segura y fácil de usar.
+        </p>
+      </li>
+
+      <li class="mt-2 pb-3 sm:pb-4 w-full md:w-3/6">
+        <h5 class="p-important px-6">Autenticación Segura con OAuth 2.0</h5>
+        <p class="mb-6 text-lg font-normal p-5 m-4 border rounded-lg">
+          Facilita el acceso de estudiantes, padres y personal educativo
+          mediante la implementación de autenticación segura a través de OAuth.
+          Conecta tu sistema con servicios populares como Gmail, Facebook, y
+          cuentas educativas, permitiendo a los usuarios autenticarse con
+          credenciales que ya utilizan en su día a día. Esto no solo mejora la
+          seguridad, sino que también simplifica el proceso de inscripción y
+          acceso a plataformas educativas
+        </p>
+      </li>
+
+      <li class="mt-2 pb-3 sm:pb-4 w-full md:w-3/6">
+        <h5 class="p-important px-6">
+          Reducción de Costos Operativos con Soluciones en la Nube
+        </h5>
+        <p class="mb-6 text-lg font-normal p-5 m-4 border rounded-lg">
+          Implementando soluciones en la nube, ayudo a las instituciones a
+          disminuir sus costos operativos con el tiempo. La migración a la nube
+          no solo ofrece escalabilidad y accesibilidad, sino que también reduce
+          la necesidad de infraestructura física y mantenimiento continuo, lo
+          que se traduce en ahorros significativos a largo plazo
+        </p>
+      </li>
+    </ul>
+
+    <h5 class="titles-important">He ayudado ...</h5>
+
+    <ul class="flex flex-wrap justify-center px-20">
+      <li
+        class="p-important mt-2 p-3 px-7 sm:p-4 sm:px-9 w-full md:w-3/6 text-balance"
+      >
+        ... a instituciones educativas a analizar y disminuir sus costos de
+        servicios web en 60 días a través de un análisis de migración de
+        Infraestructura on-premise a servicios de Cloud Computing dedicando 4
+        horas semanales.
+      </li>
+      <li
+        class="p-important mt-2 p-3 px-7 sm:p-4 sm:px-9 w-full md:w-3/6 text-balance"
+      >
+        ... a escuelas a mejorar su procesamiento de información interna en
+        lograr 6 meses mediante el desarrollo de software web a la medida
+        dedicando 3 horas de su tiempo a la semana.
+      </li>
+      <li
+        class="p-important mt-2 p-3 px-7 sm:p-4 sm:px-9 w-full md:w-3/6 text-balance"
+      >
+        ... a generar procesos de automatización de su información hasta 5 veces
+        más rápido durante 120 días dedicando 4 horas semanales.
+      </li>
     </ul>
 
     <div class="flex flex-col items-center">
       <h5 class="text-xl font-bold pt-9 pb-4">
-        ¿Listo para llevar tu escuela al siguiente nivel? Contacta directamente
-        conmigo para comenzar a diseñar una solución a la medida de tus
-        necesidades.
+        Contacta directamente conmigo y comencemos a diseñar una solución a la
+        medida de tus necesidades.
       </h5>
-      <button
+      <a
+        href="/contacto"
         class="font-medium rounded-lg text-sm px-5 w-28 py-2.5 focus:outline-none button-color"
       >
-        Contacto
-      </button>
+        Contactar
+      </a>
     </div>
   </section>
 </BaseLayout>

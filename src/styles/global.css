@@ -186,6 +186,19 @@ h5 {
 	font-weight: 700;
 }
 
+.titles-important {
+	color: var(--accent-regular);
+	font-weight: 700;
+}
+
+.p-important {
+	color: var(--accent-dark);
+}
+
+.border-personalized {
+	border: 6px var(--accent-light) solid;
+}
+
 /* Utilities */
 
 .sr-only {
