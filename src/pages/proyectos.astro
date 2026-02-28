@@ -1,7 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const projects = [
+const projects: {
+  sector: string;
+  name: string;
+  href: string | null;
+  reto: string;
+  solucion: string;
+  resultado: string;
+  testimonial?: boolean;
+  testimonialAuthor?: string;
+  demo?: boolean;
+}[] = [
   {
     sector: "Educación pública",
     name: "CECATI 13",
@@ -37,6 +47,18 @@ const projects = [
     resultado:
       "Procesos administrativos centralizados y automatizados, con acceso en tiempo real para la administración y los residentes.",
   },
+  {
+    sector: "Negocio local · Servicio automotriz",
+    name: "Servicio Automotríz Martínez",
+    href: "https://dvnegrete.github.io/servicio-martinez/",
+    demo: true,
+    reto:
+      "El taller no contaba con presencia digital. Los clientes no podían encontrar información sobre servicios, ubicación u horarios en internet.",
+    solucion:
+      "Demo de sitio web informativo desarrollado en React, TypeScript y Tailwind CSS, con secciones de servicios, diferenciadores del negocio, datos de contacto y acceso directo por WhatsApp.",
+    resultado:
+      "Muestra funcional que refleja la identidad del taller y permite a cualquier visitante ver los servicios disponibles, contactar por WhatsApp y encontrar la ubicación desde cualquier dispositivo.",
+  },
 ];
 ---
 
@@ -54,9 +76,16 @@ const projects = [
       {
         projects.map((project) => (
           <li class="project-card rounded-xl p-6 md:p-8">
-            <span class="sector-tag text-sm uppercase tracking-widest">
-              {project.sector}
-            </span>
+            <div class="flex flex-wrap items-center gap-3 mb-2">
+              <span class="sector-tag text-sm uppercase tracking-widest">
+                {project.sector}
+              </span>
+              {project.demo && (
+                <span class="demo-badge text-xs font-semibold px-2 py-0.5 rounded-full">
+                  Demo
+                </span>
+              )}
+            </div>
             <h3 class="text-2xl font-bold mt-2 mb-6">{project.name}</h3>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -156,6 +185,12 @@ const projects = [
 
   .site-link:hover {
     color: var(--accent-dark);
+  }
+
+  .demo-badge {
+    background-color: var(--accent-overlay);
+    color: var(--accent-dark);
+    border: 1px solid var(--accent-regular);
   }
 
   .button-color {
