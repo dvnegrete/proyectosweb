@@ -1,0 +1,74 @@
+---
+const categories: { label: string; items: string[] }[] = [
+  {
+    label: "Frontend",
+    items: ["React", "Angular", "Vue.js", "Next.js", "Astro", "TypeScript"],
+  },
+  {
+    label: "Backend",
+    items: ["Node.js", "Express", "Next.js API", "REST APIs"],
+  },
+  {
+    label: "Bases de datos",
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "Prisma"],
+  },
+  {
+    label: "Nube & despliegue",
+    items: [
+      "Google Cloud Platform",
+      "Amazon Web Services",
+      "Microsoft Azure",
+      "Railway",
+      "Render",
+    ],
+  },
+];
+---
+
+<section class="tech-section max-w-screen-lg mx-auto px-4 py-10 text-center">
+  <h2 class="text-3xl font-bold sm:text-4xl section-title mb-3">
+    Tecnologías
+  </h2>
+  <p class="mb-10 text-sm">
+    Trabajo con el stack que mejor se adapta a tu proyecto, no con uno fijo.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-left">
+    {
+      categories.map((cat) => (
+        <div class="tech-card rounded-xl p-5">
+          <h3 class="cat-label text-xs font-bold uppercase tracking-widest mb-4">
+            {cat.label}
+          </h3>
+          <ul class="flex flex-col gap-2">
+            {cat.items.map((item) => (
+              <li class="tech-item text-sm">{item}</li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .tech-section {
+    color: var(--gray-200);
+  }
+
+  .section-title {
+    color: var(--gray-0);
+  }
+
+  .tech-card {
+    border: 1px solid var(--gray-700);
+  }
+
+  .cat-label {
+    color: var(--accent-dark);
+  }
+
+  .tech-item {
+    color: var(--gray-200);
+  }
+</style>
