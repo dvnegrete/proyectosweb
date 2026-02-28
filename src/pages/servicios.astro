@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Pricing from "../components/Pricing.astro";
 const arrayKeywords = [
   "Desarrollo web",
   "proyectos web",
@@ -122,7 +123,7 @@ const arrayKeywords = [
           <img
             class="h-16 rounded px-6 my-3"
             src="https://github-personal-dvn.s3.us-east-2.amazonaws.com/img/gcp-color.svg"
-            alt="GCP"
+            alt="Google Cloud Platform"
           />
           <img
             class="h-16 rounded-full px-6 my-3"
@@ -132,20 +133,21 @@ const arrayKeywords = [
           <img
             class="h-16 rounded px-6 my-3"
             src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg"
-            alt="Render"
+            alt="Microsoft Azure"
           />
           <img
             class="h-16 rounded px-6 my-3"
             src="https://github-personal-dvn.s3.us-east-2.amazonaws.com/img/aws.svg"
-            alt="Render"
+            alt="Amazon Web Services"
           />
           <img
             class="max-w-32 rounded-lg bg-black p-2 my-3"
             src="https://railway.app/brand/logotype-light.svg"
-            alt="Render"
+            alt="Railway"
           />
         </figure>
       </li>
     </ul>
   </div>
+  <Pricing />
 </BaseLayout>

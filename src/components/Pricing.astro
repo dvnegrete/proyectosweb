@@ -1,0 +1,89 @@
+---
+const plans = [
+  {
+    title: "Sitio web informativo",
+    description: "Hasta 5 páginas, diseño responsive, formulario de contacto.",
+    price: "Desde $6,000",
+    period: "MXN",
+  },
+  {
+    title: "Sitio web con panel de administración",
+    description: "Gestión de contenido sin necesidad de soporte técnico.",
+    price: "Desde $13,000",
+    period: "MXN",
+  },
+  {
+    title: "Aplicación web / SPA",
+    description: "Funcionalidades a medida, integraciones, flujos personalizados.",
+    price: "Desde $20,000",
+    period: "MXN",
+  },
+  {
+    title: "Mantenimiento mensual",
+    description: "Actualizaciones, soporte y optimización continua.",
+    price: "Desde $1,500",
+    period: "MXN / mes",
+  },
+];
+---
+
+<section class="max-w-screen-lg mx-auto px-4 py-12 text-center">
+  <h2 class="text-4xl font-bold my-5">Inversión</h2>
+  <p class="mb-10">
+    Cada proyecto es único. Aquí tienes una referencia para orientarte:
+  </p>
+
+  <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left px-4">
+    {
+      plans.map((plan) => (
+        <li class="pricing-card rounded-xl p-6">
+          <h3 class="text-xl font-semibold mb-2">{plan.title}</h3>
+          <p class="mb-4 text-sm">{plan.description}</p>
+          <p class="price-amount text-2xl font-bold">
+            {plan.price}{" "}
+            <span class="text-base font-normal">{plan.period}</span>
+          </p>
+        </li>
+      ))
+    }
+  </ul>
+
+  <p class="mt-10 mb-4">Consulta inicial sin costo.</p>
+  <a
+    href="https://wa.me/525620240995?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="cta-wa inline-block font-semibold py-3 px-8 rounded-lg transition"
+  >
+    Escribir por WhatsApp
+  </a>
+</section>
+
+<style>
+  .pricing-card {
+    border: 1px solid var(--gray-700);
+    color: var(--gray-200);
+  }
+
+  .pricing-card h3 {
+    color: var(--gray-0);
+    font-size: var(--text-md);
+  }
+
+  .price-amount {
+    color: var(--accent-dark);
+  }
+
+  .price-amount span {
+    color: var(--gray-400);
+  }
+
+  .cta-wa {
+    background-color: #16a34a;
+    color: #ffffff;
+  }
+
+  .cta-wa:hover {
+    background-color: #15803d;
+  }
+</style>

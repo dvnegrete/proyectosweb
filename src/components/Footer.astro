@@ -1,6 +1,5 @@
 ---
 import Icon from './Icon.astro';
-const currentYear = new Date().getFullYear();
 ---
 
 <footer>
@@ -9,7 +8,7 @@ const currentYear = new Date().getFullYear();
 			Diseño  & Desarrollo con <a href="https://astro.build/">Astro</a>
 			<Icon icon="rocket-launch" size="1.2em" />
 		</p>
-		<a href="https://dvnegrete.github.io">&copy; {currentYear} Damián Valenzuela Negrete</a>
+		<a href="https://dvnegrete.github.io">&copy; <span id="footer-year"></span> Damián Valenzuela Negrete</a>
 	</div>
 	<p class="socials">
 		<a href="https://dvnegrete.github.io">Website Personal</a>
@@ -72,3 +71,7 @@ const currentYear = new Date().getFullYear();
 		}
 	}
 </style>
+
+<script>
+  document.getElementById('footer-year').textContent = String(new Date().getFullYear());
+</script>

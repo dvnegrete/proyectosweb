@@ -1,0 +1,165 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const projects = [
+  {
+    sector: "Educación pública",
+    name: "CECATI 13",
+    href: "https://cecati13.edu.mx",
+    reto:
+      "Los procesos de inscripción y difusión de cursos eran completamente manuales, generando filas, pérdida de tiempo y carga administrativa para el personal del plantel.",
+    solucion:
+      "Sitio web institucional con información actualizable de cursos y un sistema de inscripción en línea respaldado por una API desarrollada a medida.",
+    resultado:
+      "Inscripciones disponibles las 24 horas, reducción significativa del tiempo de atención presencial y mayor alcance de la oferta educativa.",
+  },
+  {
+    sector: "Educación pública",
+    name: "CECATI 196",
+    href: "https://cecati196.edu.mx",
+    reto:
+      "Sin presencia digital, la institución dependía de medios físicos para comunicar su oferta educativa, que cambia constantemente.",
+    solucion:
+      "Sitio web moderno con un panel de administración que permite al propio personal actualizar cursos, horarios y avisos sin necesitar soporte técnico.",
+    resultado:
+      "\"Ahora tenemos un sitio web moderno y podemos mostrar nuestra oferta educativa que se modifica constantemente en un solo sitio.\"",
+    testimonial: true,
+    testimonialAuthor: "Personal administrativo, CECATI 196",
+  },
+  {
+    sector: "Administración de condominios",
+    name: "El Agave",
+    href: null,
+    reto:
+      "La gestión del condominio se hacía de forma manual: pagos, avisos a residentes y seguimiento de incidencias sin ningún sistema centralizado.",
+    solucion:
+      "Aplicación web completa (frontend y backend) desarrollada en TypeScript para digitalizar la administración del condominio, accesible desde cualquier dispositivo.",
+    resultado:
+      "Procesos administrativos centralizados y automatizados, con acceso en tiempo real para la administración y los residentes.",
+  },
+];
+---
+
+<BaseLayout title="Proyectos - ProyectoSweb">
+  <section class="max-w-screen-lg mx-auto px-4 mb-12">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold my-5">Proyectos</h2>
+      <p class="text-lg sm:px-16">
+        Algunos de los proyectos que he desarrollado. Cada uno partió de un
+        problema real y terminó en una solución funcional, a medida y publicada.
+      </p>
+    </div>
+
+    <ul class="flex flex-col gap-10 px-4">
+      {
+        projects.map((project) => (
+          <li class="project-card rounded-xl p-6 md:p-8">
+            <span class="sector-tag text-sm uppercase tracking-widest">
+              {project.sector}
+            </span>
+            <h3 class="text-2xl font-bold mt-2 mb-6">{project.name}</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div>
+                <p class="block-label text-sm font-semibold uppercase mb-2">
+                  Reto
+                </p>
+                <p class="text-sm">{project.reto}</p>
+              </div>
+
+              <div>
+                <p class="block-label text-sm font-semibold uppercase mb-2">
+                  Solución
+                </p>
+                <p class="text-sm">{project.solucion}</p>
+              </div>
+
+              <div>
+                <p class="block-label text-sm font-semibold uppercase mb-2">
+                  Resultado
+                </p>
+                {project.testimonial ? (
+                  <div>
+                    <blockquote class="italic text-sm border-l-4 pl-3 quote-border">
+                      {project.resultado}
+                    </blockquote>
+                    <p class="text-xs mt-2 sector-tag">
+                      — {project.testimonialAuthor}
+                    </p>
+                  </div>
+                ) : (
+                  <p class="text-sm">{project.resultado}</p>
+                )}
+              </div>
+            </div>
+
+            {project.href && (
+              <div class="mt-6">
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="site-link text-sm font-medium"
+                >
+                  Ver sitio →
+                </a>
+              </div>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="flex flex-col items-center mt-12 text-center">
+      <h5 class="text-xl font-bold pb-4">
+        ¿Tu proyecto podría ser el siguiente?
+      </h5>
+      <p class="mb-6">
+        Cuéntame tu idea y construimos la solución juntos.
+      </p>
+      <a
+        href="/contacto"
+        class="font-medium rounded-lg text-sm px-6 py-3 focus:outline-none button-color"
+      >
+        Contactar
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .project-card {
+    border: 1px solid var(--gray-700);
+    color: var(--gray-200);
+  }
+
+  .project-card h3 {
+    color: var(--gray-0);
+  }
+
+  .sector-tag {
+    color: var(--gray-400);
+  }
+
+  .block-label {
+    color: var(--accent-dark);
+  }
+
+  .quote-border {
+    border-color: var(--gray-600);
+    color: var(--gray-200);
+  }
+
+  .site-link {
+    color: var(--accent-regular);
+  }
+
+  .site-link:hover {
+    color: var(--accent-dark);
+  }
+
+  .button-color {
+    background-color: var(--accent-regular);
+    color: var(--accent-text-over);
+  }
+</style>
