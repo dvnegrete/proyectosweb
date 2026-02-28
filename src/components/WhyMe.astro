@@ -1,0 +1,80 @@
+---
+import { iconPaths } from "./IconPaths";
+import Icon from "./Icon.astro";
+
+const reasons: {
+  icon: keyof typeof iconPaths;
+  title: string;
+  description: string;
+}[] = [
+  {
+    icon: "terminal-window",
+    title: "Trato directo con el desarrollador",
+    description:
+      "Sin intermediarios ni agencias. Hablas directamente con quien construye tu proyecto.",
+  },
+  {
+    icon: "heart",
+    title: "Trabajo con clientes de Latinoamérica",
+    description:
+      "Atención en español, sin barreras de idioma. Trabajo con negocios e instituciones de México y toda Latinoamérica.",
+  },
+  {
+    icon: "trophy",
+    title: "+5 años de experiencia",
+    description:
+      "Proyectos reales para instituciones educativas, organismos públicos y empresas privadas.",
+  },
+  {
+    icon: "cloud",
+    title: "Soluciones en la nube",
+    description:
+      "Experiencia con Google Cloud Platform, Amazon Web Services y Microsoft Azure para garantizar disponibilidad, seguridad y escalabilidad.",
+  },
+];
+---
+
+<section class="why-me-section">
+  <div class="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+    <h2 class="text-3xl font-bold sm:text-4xl section-title text-center mb-10">
+      ¿Por qué trabajar conmigo?
+    </h2>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
+      {
+        reasons.map((item) => (
+          <div class="flex items-start gap-4">
+            <span class="shrink-0 rounded-lg icon-box">
+              <Icon icon={item.icon} />
+            </span>
+            <div>
+              <h3 class="text-lg font-bold reason-title">{item.title}</h3>
+              <p class="mt-1 text-sm">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-me-section {
+    color: var(--gray-200);
+  }
+
+  .section-title {
+    color: var(--gray-0);
+  }
+
+  .icon-box {
+    color: var(--accent-dark);
+    transition: color var(--theme-transition);
+    padding: var(--icon-padding);
+  }
+
+  .reason-title {
+    color: var(--gray-100);
+    font-size: var(--text-md);
+  }
+</style>
