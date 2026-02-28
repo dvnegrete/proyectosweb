@@ -6,5 +6,9 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react(), sitemap()],
-  site: 'https://proyectosweb.com.mx'
+  site: 'https://proyectosweb.com.mx',
+  redirects: {
+    '/escuelas': '/proyectos',
+    '/escuelas/': '/proyectos/',
+  },
 });
